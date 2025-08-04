@@ -3,13 +3,14 @@ from twilio.twiml.messaging_response import MessagingResponse
 import requests
 import os
 
-API_KEY = os.getenv("OPENROUTER_API_KEY")
-print(f"[DEBUG] Loaded API Key: {API_KEY}")
+
 
 app = Flask(__name__)
 
 @app.route("/bot", methods=["POST"])
 def bot():
+    API_KEY = os.getenv("OPENROUTER_API_KEY")
+    print(f"[DEBUG] Loaded API Key: {API_KEY}")
     incoming_msg = request.values.get("Body", "").strip()
     print(f"[WHATSAPP INCOMING] Message: {incoming_msg}")
 
