@@ -2,10 +2,9 @@ from flask import Flask, request, Response
 from twilio.twiml.messaging_response import MessagingResponse
 import requests
 import os
-from dotenv import load_dotenv
 
-load_dotenv()
 API_KEY = os.getenv("OPENROUTER_API_KEY")
+print(f"[DEBUG] Loaded API Key: {API_KEY}")
 
 app = Flask(__name__)
 
