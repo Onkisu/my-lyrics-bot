@@ -68,5 +68,7 @@ def split_message(msg, limit=1200):
     return [msg[i:i+limit] for i in range(0, len(msg), limit)]
 
 if __name__ == "__main__":
-    print("[SERVER] AI Lyrics bot is running on http://localhost:5001")
+    port = int(os.environ.get("PORT", 5001))
+    print(f"[SERVER] AI Lyrics bot is running on port {port}")
     app.run(debug=True, host="0.0.0.0", port=port)
+
