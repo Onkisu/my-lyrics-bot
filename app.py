@@ -9,6 +9,7 @@ app = Flask(__name__)
 
 @app.route("/bot", methods=["POST"])
 def bot():
+    print(f"[DEBUG - ENV] All environment vars: {os.environ}")
     API_KEY = os.getenv("OPENROUTER_API_KEY")
     print(f"[DEBUG] Loaded API Key: {API_KEY}")
     incoming_msg = request.values.get("Body", "").strip()
