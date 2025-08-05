@@ -16,7 +16,7 @@ def bot():
     print(f"[WHATSAPP INCOMING] Message: {incoming_msg}")
 
     lang_prompt = detect_language(incoming_msg)
-    prompt = f"{lang_prompt} Write a song lyrics about: {incoming_msg}"
+    prompt = f"{lang_prompt} {incoming_msg}"
     print(f"[AI PROMPT] {prompt}")
 
     try:
