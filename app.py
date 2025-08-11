@@ -25,7 +25,7 @@ def bot():
             json={
                 "contents": [
                     {
-                        "parts": [{"text":{prompt}"}]
+                      "parts": [{"text": prompt}]
                     }
                 ]
             },
