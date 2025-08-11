@@ -25,7 +25,7 @@ def bot():
             json={
                 "contents": [
                     {
-                        "parts": [{"text": f"You are a creative lyrics composer. {prompt}"}]
+                        "parts": [{"text":{prompt}"}]
                     }
                 ]
             },
