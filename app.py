@@ -14,7 +14,7 @@ def bot():
     incoming_msg = request.values.get("Body", "").strip()
     print(f"[WHATSAPP INCOMING] Message: {incoming_msg}")
 
-    lang_prompt = detect_language(incoming_msg)
+    # lang_prompt = detect_language(incoming_msg)
     prompt = incoming_msg
     print(f"[AI PROMPT] {prompt}")
 
